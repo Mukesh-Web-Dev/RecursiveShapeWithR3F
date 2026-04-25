@@ -28,10 +28,3 @@ The codebase is strictly modularized to maintain pure React rendering cycles and
 * `AnimationProvider.jsx` & `useAnimation.js` — The global React Context allowing any sphere at any depth to instantly trigger the reverse collapse sequence.
 
 ---
-
-## 🛠️ Installation & Setup
-
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
-   cd your-repo-name
