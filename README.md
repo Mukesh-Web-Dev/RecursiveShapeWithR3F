@@ -1,16 +1,37 @@
-# React + Vite
+# 🌌 Recursive 3D Instancing with React Three Fiber
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A highly optimized, interactive 3D React application that procedurally generates and animates a recursive tree of spheres. Built with **Three.js** and **React Three Fiber**, this project handles massive amounts of animated 3D objects at 60 FPS using WebGL Instancing and custom math optimizations.
 
-Currently, two official plugins are available:
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Threejs](https://img.shields.io/badge/threejs-black?style=for-the-badge&logo=three.js&logoColor=white)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* 🚀 **Extreme GPU Performance:** Uses `@react-three/drei` `<Instances>` to render thousands of dynamic spheres in a single GPU draw call.
+* 🌳 **Procedural Recursion:** Automatically generates a branching hierarchy of spheres using dependent spherical coordinates (zigzagging positive/negative).
+* 🎬 **Fluid Animation:** Custom `Math.exp()` exponential dampening creates buttery-smooth, frame-independent spring physics without external animation libraries.
+* 🔄 **Interactive Reversal:** Clicking the 3D scene triggers a synced, recursive collapse, sending every sphere back to its parent's origin seamlessly.
+* 🛡 **Z-Fighting Prevention:** Spheres dynamically scale to `0` when resting at their parent's center to prevent geometry overlapping.
+* 🎥 **Cinematic Auto-Rotation:** The camera smoothly orbits the origin using built-in `<OrbitControls>`.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📂 Project Architecture
+
+The codebase is strictly modularized to maintain pure React rendering cycles and eliminate prop-drilling:
+
+* `App.jsx` — The master canvas, lighting, shadow bounds, and `<Instances>` master wrapper.
+* `RecursiveShape.jsx` — The core logic containing the `useFrame` animation loop and Phase state machine.
+* `treeGenerator.js` — The pure math helper that handles procedural spherical coordinates and random color generation.
+* `AnimationProvider.jsx` & `useAnimation.js` — The global React Context allowing any sphere at any depth to instantly trigger the reverse collapse sequence.
+
+---
+
+## 🛠️ Installation & Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
+   cd your-repo-name
