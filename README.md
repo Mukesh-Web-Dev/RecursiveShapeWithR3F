@@ -1,5 +1,7 @@
 # 🌌 Recursive 3D Instancing with React Three Fiber
 
+## URL -> https://mukesh-web-dev.github.io/RecursiveShapeWithR3F/
+
 A highly optimized, interactive 3D React application that procedurally generates and animates a recursive tree of spheres. Built with **Three.js** and **React Three Fiber**, this project handles massive amounts of animated 3D objects at 60 FPS using WebGL Instancing and custom math optimizations.
 
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
