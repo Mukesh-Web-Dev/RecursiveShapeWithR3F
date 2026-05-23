@@ -1,0 +1,8 @@
+h2 {
+  font-size: 1.5rem;          /* 24px base scale */
+  font-weight: 700;           /* Bold weight */
+  line-height: 1.3;           /* Comfortable line spacing */
+  color: #1a1a1a;             /* Dark gray for readability */
+  margin-top: 1.5rem;         /* Space above the heading */
+  margin-bottom: 0.75rem;     /* Space between heading and paragraph */
+}
