@@ -1,0 +1,1 @@
+*{box-sizing:border-box}#root,html,body,#canvas-container{width:100vw;height:100vh;margin:0;padding:0;position:fixed;top:0;left:0;overflow:hidden}canvas{width:100vw;height:100vh}h2{color:#1a1a1a;margin-top:1.5rem;margin-bottom:.75rem;font-size:1.5rem;font-weight:700;line-height:1.3}
