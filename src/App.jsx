@@ -15,7 +15,7 @@ export default function App() {
   return (
     <div
       style={{ width: "100vw", height: "100vh" }}
-    >
+    ><h2>Click On Cube to Interact</h2>
       <AnimationProvider>
         <Canvas
           shadows
